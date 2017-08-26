@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2016 Start Bootstrap
+ * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
@@ -10,25 +10,6 @@ body {
   color: white;
   background-color: black;
 }
-
-video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-.stopfade { 
-   opacity: .5;
-}
-
 html {
   width: 100%;
   height: 100%;
@@ -143,8 +124,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url('../img/intro-bg.jpg') no-repeat bottom center scroll;
-  /* ../img/intro-bg.jpg */
+  /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -160,6 +140,23 @@ a:focus {
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
+}
+.intro .intro-body-container {
+  position: absolute;
+  z-index: 1;
+  top: 25vh;
+}
+.intro .intro-body-video {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.intro .intro-body-video video {
+  width: auto;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .intro {
@@ -244,8 +241,8 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/lk-bg.jpg) no-repeat center center scroll;
-  background-color: DarkGray;
+  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -278,16 +275,16 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
-  border: 1px solid #0e2fd3;
-  color: #0e2fd3;
+  border: 1px solid #42DCA3;
+  color: #42DCA3;
   background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #0e2fd3;
+  border: 1px solid #42DCA3;
   outline: none;
   color: black;
-  background-color: #0e2fd3;
+  background-color: #42DCA3;
 }
 ul.banner-social-buttons {
   margin-top: 0;
@@ -331,13 +328,4 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
-
-}
-@media screen and (max-width: 500px) { 
-  div{width:70%;} 
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url("http://media.blizzard.com/wow/legion-6a153ad2/images/header-illidan-still.jpg") #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
 }

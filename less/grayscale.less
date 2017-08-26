@@ -129,7 +129,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -143,6 +143,24 @@ a {
         }
         .intro-text {
             font-size: 18px;
+        }
+        &-container {
+            position: absolute;
+            z-index: 1;
+            top: 25vh;
+        }
+        &-video {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+            video {
+                width: auto; 
+                height: 100%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                z-index: 0;
+            }
         }
     }
     @media(min-width:768px) {
